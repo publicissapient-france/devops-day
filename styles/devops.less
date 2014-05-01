@@ -7,6 +7,15 @@
   }
 }
 
+.diagonal-gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, right bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(left top, @startColor, @endColor);
+  background: -moz-linear-gradient(left top, @startColor, @endColor);
+  background: -ms-linear-gradient(left top, @startColor, @endColor);
+  background: -o-linear-gradient(left top, @startColor, @endColor);
+}
+
 //Reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -73,7 +82,7 @@ body {
 @greyBackground: #F2F2F2;
 @greyLine: #E4E4E4;
 
-@xebiaColorDeep: #491440;
+@xebiaColorDeep: #45133F;
 @orangeColor: #F99B1D;
 
 @greyBackgroundProgram: #E0E0E0;
@@ -107,8 +116,33 @@ header {
 
   .devops {
     min-height: 464px;
-    background-color: @xebiaColorDeep;
+    background: url('../images/header/Img-devops-header.jpg') @xebiaColorDeep;
+
+    img {
+      margin-top:30px;
+      margin-left: 10px;
+    }
+
+    .time-wrapper {
+      margin-top:60px;
+      time {
+        color: @orangeColor;
+        font-size: 50px;
+        margin-left: 40px;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      text-align: center;
+      .diagonal-gradient(@xebiaColorDeep, @xebiaColor);
+    }
+
   }
+}
+
+main section {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .centerBloc() {
@@ -236,9 +270,6 @@ main {
 
 .partner {
 
-  padding-top: 30px;
-  padding-bottom: 30px;
-
   h1 {
     text-transform: uppercase;
     font-size: 21px;
@@ -258,17 +289,15 @@ main {
 
     .img-wrapper {
 
-
-
       &.first {
-        width:160px;
+        width: 160px;
       }
       &.second {
-        width:200px;
+        width: 200px;
       }
       &.third {
-        margin-left:20px;
-        width:160px;
+        margin-left: 20px;
+        width: 160px;
       }
       display: inline-block;
       img {
