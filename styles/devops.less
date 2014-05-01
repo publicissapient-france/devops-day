@@ -1,0 +1,359 @@
+//mixins
+.clearFloat() {
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+//Reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//Site
+
+p, h1, h2, span, div, th, td, a {
+  font-family: 'Cantarell', sans-serif;
+}
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@xebiaColor: #6C1D5F;
+@greyBackground: #F2F2F2;
+@greyLine: #E4E4E4;
+
+@xebiaColorDeep: #491440;
+@orangeColor: #F99B1D;
+
+@greyBackgroundProgram: #E0E0E0;
+
+header {
+  .xebia {
+    min-height: 60px;
+    background-color: @xebiaColor;
+    padding-bottom: 10px;
+
+    .logo-xebia {
+      margin-left: 45px;
+      margin-top: 15px;
+      float: left;
+    }
+
+    @media (max-width: 420px) {
+      text-align: center;
+      .logo-xebia {
+        margin-top: 0;
+        padding-top: 10px;
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .clearFloat();
+  }
+
+  .devops {
+    min-height: 464px;
+    background-color: @xebiaColorDeep;
+  }
+}
+
+.centerBloc() {
+  max-width: 824px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  .tagline {
+    h1 {
+      text-align: center;
+      color: @orangeColor;
+      font-size: 22px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 21px;
+      border-bottom: 1px solid black;
+
+      margin-top: 20px;
+
+      .centerBloc();
+
+      b {
+        font-weight: bold;
+      }
+    }
+
+    .first-paragraph {
+      margin-top: 50px;
+    }
+
+    p {
+      .centerBloc();
+
+      &.bold {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+    }
+
+    .ordi-moche {
+      float: right;
+      height: 248px;
+    }
+
+    .clearFloat();
+  }
+
+  .program {
+    background-color: @greyBackgroundProgram;
+    padding-bottom: 60px;
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 22px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      b {
+        font-weight: bold;
+      }
+    }
+
+    .table-wrapper {
+
+      background-color: white;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      table {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+
+        thead th {
+          color: @orangeColor;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        tbody {
+          td {
+            text-align: center;
+            border-bottom: 1px solid @greyLine;
+            padding-top: 12px;
+            padding-bottom: 12px;
+
+            &.center-cell {
+              border-right: 1px solid @greyLine;
+            }
+
+            &.inscription-cell {
+              color: @xebiaColor;
+              vertical-align: middle;
+            }
+
+            &:first-of-type {
+              color: @xebiaColor;
+              font-weight: bold;
+              text-align: left;
+            }
+
+            &.last-cell {
+              border-right: 1px solid @greyLine;
+            }
+
+            &.last-line {
+              border-bottom: none;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.partner {
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 21px;
+    border-bottom: 1px solid black;
+
+    margin-top: 20px;
+
+    .centerBloc();
+
+    b {
+      font-weight: bold;
+    }
+  }
+
+  .logo-partner {
+    text-align: center;
+
+    .img-wrapper {
+
+
+
+      &.first {
+        width:160px;
+      }
+      &.second {
+        width:200px;
+      }
+      &.third {
+        margin-left:20px;
+        width:160px;
+      }
+      display: inline-block;
+      img {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+footer {
+  .social {
+    background-color: @greyBackground;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: black;
+      @height: 100px;
+      height: @height;
+      line-height: @height;
+      margin: 0 20px;
+
+      @media (max-width: 450px) {
+        margin: 0;
+      }
+
+      &:visited {
+        text-decoration: none;
+        color: black;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .alliancy {
+
+    background-color: #f1f0ee;
+    height: 180px;
+
+    .tagline {
+      width: 462px;
+      margin: auto;
+      height: 170px;
+      background: url('../images/footer-alliance.png') 0 20px no-repeat #f1f0ee;
+    }
+
+    .tagline-xebia {
+      width: 462px;
+      margin: auto;
+      height: 111px;
+      background: url('../images/footer-logo-xebia.png') 0 20px no-repeat #f1f0ee;
+    }
+
+    .tagline-alliance {
+      width: 450px;
+      margin: auto;
+      height: 47px;
+      border-top: 1px solid #bebab8;
+
+      p {
+        text-transform: uppercase;
+        line-height: 16px;
+        text-align: justify;
+        float: left;
+        margin-left: 7px;
+        margin-top: 16px;
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      a {
+        color: #6d626b;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .logo-alliance {
+      margin-top: 10px;
+      float: left;
+    }
+  }
+}

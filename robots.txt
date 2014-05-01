@@ -1,0 +1,10 @@
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /images/
+# Files
+Disallow: /package.json
+Disallow: /README.md
+Disallow: /CNAME
