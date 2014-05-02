@@ -504,7 +504,6 @@ footer {
   .alliancy {
 
     background-color: #f1f0ee;
-    height: 180px;
 
     .tagline {
       width: 462px;
@@ -518,15 +517,26 @@ footer {
       margin: auto;
       height: 111px;
       background: url('../images/footer-logo-xebia.png') 0 20px no-repeat #f1f0ee;
+
+      @media (max-width: 470px) {
+        background: url('../images/footer-logo-xebia.png') 0 20px no-repeat #f1f0ee;
+        height: 55px;
+        margin-bottom: 10px;
+      }
     }
 
     .tagline-alliance {
       width: 450px;
       margin: auto;
-      height: 47px;
-      border-top: 1px solid #bebab8;
 
-      p {
+      border-top: 1px solid #bebab8;
+      .clearFloat();
+
+      .alliance-wrapper {
+        .clearFloat();
+      }
+
+      div {
         text-transform: uppercase;
         line-height: 16px;
         text-align: justify;
@@ -535,6 +545,15 @@ footer {
         margin-top: 16px;
         font-size: 11px;
         letter-spacing: 1px;
+
+        @media (max-width: 470px) {
+          float: none;
+          text-align: center;
+          .unused {
+            display: none;
+          }
+
+        }
       }
 
       a {
@@ -543,13 +562,195 @@ footer {
         &:hover {
           text-decoration: underline;
         }
+
+        @media (max-width: 470px) {
+          display: block;
+        }
       }
     }
 
     .logo-alliance {
       margin-top: 10px;
       float: left;
+      @media (max-width: 470px) {
+        float: none;
+      }
     }
+  }
+}
+
+//modal
+//curtesy to bootstrap.css
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -moz-transition: -moz-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+.modal-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 19px 20px 20px;
+  margin-top: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+
+  .modal-sm {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
   }
 }
 
@@ -561,9 +762,10 @@ footer {
     color: @orangeColor;
     opacity: 1;
     background-color: white;
-    width: 21px;
-    height: 21px;
-    border-radius: 21px;
+    @sizeClose: 25px;
+    width: @sizeClose;
+    height: @sizeClose;
+    border-radius: @sizeClose;
 
     &:hover {
       color: darken(@orangeColor, 10%);
