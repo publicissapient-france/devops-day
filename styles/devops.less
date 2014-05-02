@@ -69,7 +69,7 @@ table {
 
 //Site
 
-p, h1, h2, span, div, th, td, a {
+p, h1, h2, h3, h4, span, div, th, td, a {
   font-family: 'Cantarell', sans-serif;
 }
 
@@ -88,6 +88,7 @@ body {
 @greyBackgroundProgram: #E0E0E0;
 
 header {
+  position: relative;
   .xebia {
     min-height: 60px;
     background-color: @xebiaColor;
@@ -116,27 +117,74 @@ header {
 
   .devops {
     min-height: 464px;
-    background: url('../images/header/Img-devops-header.jpg') @xebiaColorDeep;
+    position: relative;
+    .diagonal-gradient(@xebiaColorDeep, @xebiaColor);
 
-    img {
-      margin-top:30px;
+    .devops-titre {
+      margin-top: 30px;
       margin-left: 10px;
     }
 
+    .devops-logo {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+    }
+
     .time-wrapper {
-      margin-top:60px;
+      margin-top: 60px;
       time {
         color: @orangeColor;
         font-size: 50px;
         margin-left: 40px;
       }
     }
-    
-    @media (max-width: 1024px) {
+
+    @media (max-width: 1020px) {
       text-align: center;
-      .diagonal-gradient(@xebiaColorDeep, @xebiaColor);
+
+      .devops-logo {
+        position: static;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
     }
 
+    @media (max-width: 705px) {
+      .devops-logo {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 470px) {
+      .devops-titre {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .more-button {
+    text-align: center;
+    bottom: -37px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .triangle {
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-top: 16px solid @xebiaColor;
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 22px;
+    z-index: -1;
   }
 }
 
@@ -245,6 +293,7 @@ main {
             &.inscription-cell {
               color: @xebiaColor;
               vertical-align: middle;
+
             }
 
             &:first-of-type {
@@ -259,6 +308,104 @@ main {
 
             &.last-line {
               border-bottom: none;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            &:hover {
+              color: @orangeColor;
+            }
+          }
+
+          .open-inscription a {
+
+            position: relative;
+            display: inline-block;
+            width: 100%;
+
+            &:after {
+              content: ' > ';
+
+              position: absolute;
+              right: 5px;
+
+            }
+
+          }
+
+          .inscription-line {
+            display: none;
+          }
+        }
+      }
+
+      @media (max-width: 860px) {
+        /* Force table to not be like tables anymore */
+        table, thead, tbody, th, td, tr {
+          display: block;
+        }
+
+        #table-planning {
+          tbody {
+            @borderWidth: 4px;
+            border-right: @borderWidth solid @greyLine;
+            border-left: @borderWidth solid @greyLine;
+            border-bottom: @borderWidth solid @greyLine;
+
+            &:first-of-type {
+              border-top: @borderWidth solid @greyLine;
+            }
+
+            .inscription-line {
+              display: inherit;
+            }
+          }
+
+          thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+          }
+
+          tr {
+            border-bottom: 1px solid @greyLine;
+          }
+
+          td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid @greyLine;
+            position: relative;
+
+            white-space: normal;
+            text-align: center;
+
+            &:before {
+              /* Now like a table header */
+              position: absolute;
+              /* Top/left values mimic padding */
+              top: 6px;
+              left: 6px;
+              width: 45%;
+              padding-right: 10px;
+              white-space: nowrap;
+              text-align: left;
+              font-weight: bold;
+
+            }
+
+            &.center-cell:before {
+              content: 'Dev';
+              color: @orangeColor;
+            }
+            &.second-room:before {
+              content: 'Ops';
+              color: @orangeColor;
+            }
+
+            &.inscription-cell {
+              display: none;
             }
           }
 
@@ -309,7 +456,7 @@ main {
 
 footer {
   .social {
-    background-color: @greyBackground;
+    background-color: @xebiaColor;
     text-align: center;
 
     a {
@@ -331,8 +478,27 @@ footer {
 
       img {
         vertical-align: middle;
+
+        &.active {
+          display: none;
+        }
+
+      }
+
+      &:hover {
+        img {
+          &.active {
+            display: inherit;
+          }
+
+          &.inactive {
+            display: none;
+          }
+        }
+
       }
     }
+
   }
 
   .alliancy {
@@ -383,6 +549,26 @@ footer {
     .logo-alliance {
       margin-top: 10px;
       float: left;
+    }
+  }
+}
+
+.modal-header {
+  background-color: @orangeColor;
+  color: white;
+
+  .close {
+    color: @orangeColor;
+    opacity: 1;
+    background-color: white;
+    width: 21px;
+    height: 21px;
+    border-radius: 21px;
+
+    &:hover {
+      color: darken(@orangeColor, 10%);
+      background-color: darken(white, 10%);
+      opacity: 1;
     }
   }
 }

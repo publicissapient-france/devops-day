@@ -21,6 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     <link href="styles/main.min.css" rel="stylesheet"/>
+    <link href="styles/vendor/bootstrap.min.css" rel="stylesheet" />
     <script type="text/javascript">
         WebFontConfig = {
             google: { families: [  'Cantarell:400,700:latin' ] }
@@ -47,12 +48,19 @@
     </section>
 
     <section class="devops">
-        <img alt="Devops Day" src="images/header/Img-devops-titre.png"/>
+        <img alt="Devops Day" src="images/header/Img-devops-titre.png" class="devops-titre"/>
 
         <div class="time-wrapper">
             <time datetime="2014-06-10">Le 10 Juin 2014</time>
         </div>
+
+        <img alt="Devops logo" src="images/header/Img-header-devops.png" class="devops-logo"/>
     </section>
+
+    <div class="more-button">
+        <div class="triangle">&nbsp;</div>
+        <img alt="button more" src="images/Img-devops-btn-orange.png"/>
+    </div>
 </header>
 <main>
     <section class="tagline">
@@ -77,7 +85,7 @@
         <h1>Le <b>programme</b></h1>
 
         <div class="table-wrapper">
-            <table>
+            <table id="table-planning">
                 <thead>
                 <tr>
                     <th>&nbsp;</th>
@@ -98,7 +106,7 @@
                 </tr>
                 <tr>
                     <td>10h15 - 11h15</td>
-                    <td colspan="2" class="last-cell">Retour d'expérience Europcar</td>
+                    <td colspan="2" class="last-cell" data-toggle="modal" data-target="#europcar-modal">Retour d'expérience Europcar</td>
                 </tr>
                 <tr>
                     <td>11h15 - 11h30</td>
@@ -112,35 +120,48 @@
                     <td>12h45 - 14h00</td>
                     <td colspan="2" class="last-cell">Pause déjeuner</td>
                 </tr>
+                <tr class="inscription-line">
+                    <td colspan="4">Sur invitation uniquement</td>
+                </tr>
+                </tbody>
+                <tbody>
                 <tr>
                     <td>14h00 - 15h00</td>
                     <td class="center-cell">Présentation AppDynamics</td>
-                    <td class="last-cell">Présentation Kibana</td>
-                    <td rowspan="4" class="inscription-cell">S'incrire sur Eventbrite</td>
+                    <td class="last-cell second-room">Présentation Kibana</td>
+                    <td rowspan="4" class="inscription-cell open-inscription"><a href="">S'incrire sur Eventbrite</a></td>
                 </tr>
                 <tr>
                     <td>15h00 - 16h05</td>
                     <td class="center-cell">Atelier AppDynamics</td>
-                    <td class="last-cell">Atelier Kibana</td>
+                    <td class="last-cell second-room">Atelier Kibana</td>
                 </tr>
                 <tr>
                     <td>16h10 - 17h10</td>
                     <td class="center-cell">Présentation XebiaLabs</td>
-                    <td class="last-cell">Présentation PuppetLabs</td>
+                    <td class="last-cell second-room">Présentation PuppetLabs</td>
                 </tr>
                 <tr>
                     <td>17h15 - 18h15</td>
                     <td class="center-cell">Atelier XebiaLabs</td>
-                    <td class="last-cell">Atelier PuppetLabs</td>
+                    <td class="last-cell second-room">Atelier PuppetLabs</td>
                 </tr>
+                <tr class="inscription-line open-inscription">
+                    <td colspan="4"><a href="">S'inscrire sur Eventbrite</a></td>
+                </tr>
+                </tbody>
+                <tbody>
                 <tr>
                     <td>18h15 - 19h30</td>
                     <td colspan="2" class="last-cell">Buffet campagnard</td>
-                    <td rowspan="2" class="inscription-cell last-line">S'inscrire à la soirée</td>
+                    <td rowspan="2" class="inscription-cell last-line open-inscription"><a href="">S'inscrire à la soirée</a></td>
                 </tr>
                 <tr>
                     <td class="last-line">19h30 - 22h00</td>
                     <td colspan="2" class="last-line">DevOps Paris</td>
+                </tr>
+                <tr class="inscription-line open-inscription">
+                    <td colspan="4"><a href="">S'inscrire à la soirée</a></td>
                 </tr>
                 </tbody>
             </table>
@@ -178,18 +199,20 @@
 
 <footer>
     <section class="social">
-        <a href="http://www.linkedin.com/company/xebia-france" target="_blank">
-            <img src="images/social/Picto-linkedin.png" alt="Linkedin"/>
+        <a href="http://www.linkedin.com/company/xebia-france" class="linkedin" target="_blank">
+            <img src="images/social/Img-devops-linkedin-violet.png" alt="Linkedin" class="inactive"/>
+            <img src="images/social/Img-devops-linkedin-orange.png" alt="Linkedin" class="active"/>
+
         </a>
-        <a href="https://plus.google.com/100396468532572979348/posts" target="_blank">
-            <img src="images/social/Picto-google+.png" alt="Google+"/>
+        <a href="https://plus.google.com/100396468532572979348/posts" class="google" target="_blank">
+            <img src="images/social/Img-devops-google-violet.png" alt="Google+" class="inactive"/>
+            <img src="images/social/Img-devops-google-orange.png" alt="Google+" class="active"/>
         </a>
-        <a href="https://twitter.com/XebiaFr" target="_blank">
-            <img src="images/social/Picto-twitter.png" alt="Twitter"/>
+        <a href="https://twitter.com/XebiaFr" class="twitter" target="_blank">
+            <img src="images/social/Img-devops-tweeter-violet.png" alt="Twitter" class="inactive"/>
+            <img src="images/social/Img-devops-tweeter-orange.png" alt="Twitter" class="active"/>
         </a>
-        <a href="http://vimeo.com/xebia" target="_blank">
-            <img src="images/social/Picto-Vimeo.png" alt="Vimeo"/>
-        </a>
+
     </section>
 
     <section class="alliancy">
@@ -208,9 +231,26 @@
     </section>
 </footer>
 
+<div class="modal fade" id="europcar-modal" tabindex="-1" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Retour d'expérience Europcar</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     //TODO ANALYTICS
 
 </script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js" ></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.1.0/bootstrap-modal.pack.js"></script>
+
 </body>
 </html>
