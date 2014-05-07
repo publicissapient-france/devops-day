@@ -361,6 +361,11 @@ main {
             width: 100%;
             padding-left: 5px;
             padding-right: 20px;
+            color: @xebiaColor;
+
+            &:hover {
+              color: @orangeColor;
+            }
 
             @media (min-width: 860px ) {
               &:after {
@@ -419,7 +424,7 @@ main {
 
             white-space: normal;
             text-align: center;
-            padding-left: 40px;
+            padding-left: 46px;
 
             &:before {
               /* Now like a table header */
@@ -821,6 +826,117 @@ button.close {
       color: darken(@orangeColor, 10%);
       background-color: darken(white, 10%);
       opacity: 1;
+    }
+  }
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+}
+
+.modal-body {
+
+  padding: 0;
+
+  p, h4 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .slot {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+  }
+
+  .speakers {
+    background-color: @greyBackground;
+    padding-bottom: 20px;
+
+    h4 {
+
+      border-bottom: 1px solid black;
+      margin-bottom: 50px;
+      padding-top: 30px;
+      font-size: 20px;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+
+    @speakerBreakpoint: 700px;
+
+    .speaker {
+      background-color: white;
+      margin-left: 30px;
+      margin-right: 30px;
+      position: relative;
+
+      @media (max-width: @speakerBreakpoint) {
+        text-align: center;
+      }
+
+      img {
+        float: left;
+        max-width: 200px;
+
+        @media (max-width: @speakerBreakpoint) {
+          float: none;
+        }
+
+        @media (max-width: 300px) {
+          width:100%;
+        }
+      }
+
+      .info {
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 200px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        @media (max-width: @speakerBreakpoint) {
+          position: static;
+          margin-left: 20px;
+        }
+
+        @media (min-width: @speakerBreakpoint) {
+          &:before {
+            @arrowWidth: 15px;
+
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: @arrowWidth solid transparent;
+            border-bottom: @arrowWidth solid transparent;
+            border-right: @arrowWidth solid white;
+            display: block;
+            position: absolute;
+            left: -@arrowWidth;
+            top: 45%;
+          }
+        }
+
+        .name {
+          text-transform: uppercase;
+          color: @orangeColor;
+          margin-left: 20px;
+          margin-bottom: 15px;
+          display: inline-block;
+
+        }
+
+      }
+
+      .clearFloat();
     }
   }
 }
