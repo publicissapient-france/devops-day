@@ -565,6 +565,9 @@ footer {
       margin: auto;
       height: 170px;
       background: url('../images/footer-alliance.png') 0 20px no-repeat #f1f0ee;
+      @media (max-width: 470px) {
+        width: 100%;
+      }
     }
 
     .tagline-xebia {
@@ -577,12 +580,16 @@ footer {
         background: url('../images/footer-logo-xebia.png') 0 20px no-repeat #f1f0ee;
         height: 55px;
         margin-bottom: 10px;
+        width: 100%;
       }
     }
 
     .tagline-alliance {
       width: 450px;
       margin: auto;
+      @media (max-width: 470px) {
+        width: 100%;
+      }
 
       border-top: 1px solid #bebab8;
       .clearFloat();
@@ -845,12 +852,16 @@ button.close {
   }
 
   .slot {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
     margin-left: 40px;
     margin-right: 40px;
     text-align: justify;
+
+    strong {
+      font-weight: bold;
+    }
   }
 
   .speakers {
@@ -890,7 +901,7 @@ button.close {
         }
 
         @media (max-width: 300px) {
-          width:100%;
+          width: 100%;
         }
       }
 
