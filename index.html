@@ -10,7 +10,7 @@
     <meta name="owner" content="Xebia IT Architects"/>
     <meta name="description"
           content="Journée d'échange sur les synergies entre les équipes, les pratiques managériales et les outils afin de délivrer le meilleur logiciel aux clients de l'entreprise."/>
-    <meta name="keywords" content="DevOps, DevOps Day" />
+    <meta name="keywords" content="DevOps, DevOps Day"/>
     <meta name="content-language" content="fr"/>
     <meta name="robots" content="follow,index,all"/>
 
@@ -191,40 +191,30 @@
         <h1>Nos <b>Partenaires</b></h1>
 
         <div class="logo-partner">
-            <span class="img-wrapper first">
+            <a href="https://www.sgcib.com/" target="_blank" class="img-wrapper first">
                 <img alt="Logo SGIB" src="images/partner/Logo-SGIB.png"/>
-            </span>
+            </a>
 
-             <span class="img-wrapper second">
+            <a href="https://www.appdynamics.fr/" target="_blank" class="img-wrapper second">
                 <img alt="Logo AppDynamics" src="images/partner/Img-devops-appdynamics.png"/>
-            </span>
+            </a>
 
-             <span class="img-wrapper third">
-                <img alt="Logo logstash" src="images/partner/Logo-logstash.png"/>
-            </span>
-        </div>
-
-        <div class="logo-partner">
-            <span class="img-wrapper first">
-                <img alt="Logo ElatsticSearch" src="images/partner/Logo-elasticsearch.png"/>
-            </span>
-            <span class="img-wrapper second">
-                <img alt="Logo XebiaLabs" src="images/partner/Img-devops-Xebialabs.png"/>
-            </span>
-            <span class="img-wrapper third">
-                <img alt="Logo PuppetLabs" src="images/partner/Img-devops-puppetlab.png"/>
-            </span>
-        </div>
-
-        <div class="logo-partner">
-
-            <span class="img-wrapper third-quarter">
-                <img alt="Kibana" src="images/partner/Img-devops-Kibana.png"/>
-            </span>
-            <span class="img-wrapper fourth-quarter">
+            <a href="http://graphite.wikidot.com/" target="_blank" class="img-wrapper third">
                 <img alt="Logo Graphite" src="images/partner/Logo-graphite.png"/>
-            </span>
+            </a>
 
+        </div>
+
+        <div class="logo-partner">
+            <a href="http://www.elasticsearch.org/" target="_blank" class="img-wrapper first">
+                <img alt="Logo ElatsticSearch" src="images/partner/Logo-elasticsearch.png"/>
+            </a>
+            <a href="http://www.xebialabs.com/" target="_blank" class="img-wrapper second">
+                <img alt="Logo XebiaLabs" class="xebia-labs" src="images/partner/Img-devops-Xebialabs.png"/>
+            </a>
+            <a href="http://puppetlabs.com/" target="_blank" class="img-wrapper third">
+                <img alt="Logo PuppetLabs" src="images/partner/Img-devops-puppetlab.png"/>
+            </a>
         </div>
 
     </section>
@@ -312,10 +302,17 @@
 
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-1657252-19', 'xebia.fr');
     ga('send', 'pageview');
