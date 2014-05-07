@@ -214,8 +214,22 @@ main section {
 .popupable {
   cursor: pointer;
 
+  &:after {
+    content:'→';
+    background-color: @xebiaColor;
+    border-radius: 100%;
+    color:white;
+    width:25px;
+    height:25px;
+    display: inline-block;
+    line-height: 25px;
+  }
+
   &:hover {
     color: @orangeColor;
+    &:after {
+      background-color: @orangeColor;
+    }
   }
 }
 
