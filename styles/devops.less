@@ -74,7 +74,7 @@ p, h1, h2, h3, h4, span, div, th, td, a {
 }
 
 body {
-  max-width: 1024px;
+
   margin: 0 auto;
 }
 
@@ -85,10 +85,20 @@ body {
 @xebiaColorDeep: #45133F;
 @orangeColor: #F99B1D;
 
-@greyBackgroundProgram: #E0E0E0;
+@greyBackgroundProgram: #F5F5F5;
+
+.inner-wrapper {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  .clearFloat();
+}
 
 header {
   position: relative;
+
   .xebia {
     min-height: 60px;
     background-color: @xebiaColor;
@@ -116,7 +126,9 @@ header {
   }
 
   .devops {
-    min-height: 464px;
+    .inner-wrapper {
+      min-height: 464px;
+    }
     position: relative;
     .diagonal-gradient(@xebiaColorDeep, @xebiaColor);
 
@@ -199,6 +211,14 @@ main section {
   margin-right: auto;
 }
 
+.popupable {
+  cursor: pointer;
+
+  &:hover {
+    color: @orangeColor;
+  }
+}
+
 main {
   .tagline {
     h1 {
@@ -241,9 +261,15 @@ main {
     .ordi-moche {
       float: right;
       height: 248px;
+      margin-right: 40px;
+
+      @media (max-width: 750px) {
+        display: none;
+      }
     }
 
     .clearFloat();
+
   }
 
   .program {
@@ -255,15 +281,21 @@ main {
       text-transform: uppercase;
       font-size: 22px;
       padding-top: 30px;
-      padding-bottom: 30px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      color: @xebiaColor;
+
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+
+      border-bottom: 1px solid black;
       b {
         font-weight: bold;
       }
     }
 
     .table-wrapper {
-
-      background-color: white;
 
       padding-top: 20px;
       padding-bottom: 20px;
@@ -285,6 +317,7 @@ main {
             border-bottom: 1px solid @greyLine;
             padding-top: 12px;
             padding-bottom: 12px;
+            font-size: 14px;
 
             &.center-cell {
               border-right: 1px solid @greyLine;
@@ -293,6 +326,8 @@ main {
             &.inscription-cell {
               color: @xebiaColor;
               vertical-align: middle;
+              padding-left: 5px;
+              padding-right: 20px;
 
             }
 
@@ -300,6 +335,7 @@ main {
               color: @xebiaColor;
               font-weight: bold;
               text-align: left;
+              min-width: 120px;
             }
 
             &.last-cell {
@@ -323,6 +359,8 @@ main {
             position: relative;
             display: inline-block;
             width: 100%;
+            padding-left: 5px;
+            padding-right: 20px;
 
             &:after {
               content: ' > ';
@@ -419,7 +457,7 @@ main {
 
   h1 {
     text-transform: uppercase;
-    font-size: 21px;
+    font-size: 23px;
     border-bottom: 1px solid black;
 
     margin-top: 20px;
@@ -437,7 +475,7 @@ main {
     .img-wrapper {
 
       &.first {
-        width: 160px;
+        width: 290px;
       }
       &.second {
         width: 200px;
@@ -446,6 +484,16 @@ main {
         margin-left: 20px;
         width: 160px;
       }
+
+      &.second-quarter, &.third-quarter, &.fourth-quarter {
+        margin-left: 30px;
+      }
+
+      &.fourth-quarter {
+        position: relative;
+        top: 9px;
+      }
+
       display: inline-block;
       img {
         margin: 20px 0;
