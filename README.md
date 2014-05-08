@@ -11,4 +11,3 @@ Website Devops Day
 
 
 
-Liens partenaires
