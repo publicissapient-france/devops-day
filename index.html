@@ -133,7 +133,9 @@
                     <tr>
                         <td>14h00 - 15h00</td>
                         <td class="center-cell">La boite à outils agile d'une équipe DevOps</td>
-                        <td class="last-cell second-room">Puppet, un outil pour les installer tous</td>
+                        <td class="last-cell second-room popupable" data-toggle="modal" data-target="#puppet-modal">
+                            Puppet, un outil pour les installer tous
+                        </td>
                         <td rowspan="4" class="inscription-cell open-inscription"><a
                                 href="https://www.eventbrite.fr/e/billets-devops-day-by-xebia-en-pratique-11503558453">S'incrire
                             sur Eventbrite</a></td>
@@ -141,19 +143,25 @@
                     <tr>
                         <td>15h00 - 16h05</td>
                         <td class="center-cell">Atelier Jenkins</td>
-                        <td class="last-cell second-room popupable" data-toggle="modal" data-target="#xldeploy-modal">Les piliers du déploiement applicatif avec XL Deploy de
+                        <td class="last-cell second-room popupable" data-toggle="modal" data-target="#xldeploy-modal">
+                            Les piliers du déploiement applicatif avec XL Deploy de
                             XebiaLabs
                         </td>
                     </tr>
                     <tr>
                         <td>16h10 - 17h10</td>
-                        <td class="center-cell popupable" data-toggle="modal" data-target="#graphite-modal">Atelier Graphite</td>
+                        <td class="center-cell popupable" data-toggle="modal" data-target="#graphite-modal">Atelier
+                            Graphite
+                        </td>
                         <td class="last-cell second-room">Atelier AppDynamics</td>
                     </tr>
                     <tr>
                         <td>17h15 - 18h15</td>
-                        <td class="center-cell">Tests de performance en continu</td>
-                        <td class="last-cell second-room">Des dashboards pour tous avec ElasticSearch, Logstash et Kibana
+                        <td class="center-cell popupable" data-toggle="modal" data-target="#perf-modal">Tests de
+                            performance en continu
+                        </td>
+                        <td class="last-cell second-room">Des dashboards pour tous avec ElasticSearch, Logstash et
+                            Kibana
                         </td>
                     </tr>
                     <tr class="inscription-line open-inscription">
@@ -270,7 +278,7 @@
                 <p class="slot"><strong>Le déploiement applicatif n’est pas une activité des Dev OU des Ops.
                     C’est une activité transverse qui concerne tous les acteurs d’un projet,
                     y compris le QA dans certaines organisations.
-                    </strong></p>
+                </strong></p>
 
                 <p class="slot">
                     Chacun doit apporter sa pierre à l’édifice&nbsp;: les uns en fournissant des packages applicatifs,
@@ -286,7 +294,7 @@
 
                     <div class="speaker">
                         <div class="img-wrapper">
-                        <img alt="Benoit Moussaud" src="images/speaker/Benoit_Moussaud.png"/>
+                            <img alt="Benoit Moussaud" src="images/speaker/Benoit_Moussaud.png"/>
                         </div>
 
                         <div class="info">
@@ -320,13 +328,15 @@
                 <h4 class="modal-title">Un outil de monitoring applicatif</h4>
             </div>
             <div class="modal-body">
-                <p class="slot"><strong>Les équipes opérationnelles ont déjà en leur possession un bon nombre d’outils de supervision,
+                <p class="slot"><strong>Les équipes opérationnelles ont déjà en leur possession un bon nombre d’outils
+                    de supervision,
                     de monitoring ou d’alerting.
                     Nous verrons comment Graphite s’inscrit dans ce contexte et peut compléter les solutions existantes.
                 </strong></p>
 
                 <p class="slot">
-                    Nous aborderons également la mise en production de Graphite et les différents outils existants autour (JMXTrans, Syren, Graphana, etc.).
+                    Nous aborderons également la mise en production de Graphite et les différents outils existants
+                    autour (JMXTrans, Syren, Graphana, etc.).
                 </p>
 
                 <div class="speakers">
@@ -348,6 +358,119 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="perf-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Tests de performance continus</h4>
+            </div>
+            <div class="modal-body">
+                <p class="slot"><strong>Une application performante c’est&nbsp;: plus de clients sur un site internet,
+                    plus de satisfaction des utilisateurs, un gage de confiance auprès d’eux, des coût plus faibles en
+                    terme d’infrastructure, etc.
+                </strong></p>
+
+                <p class="slot">
+                    Le scenario bien souvent rencontré ressemble malheureusement plutôt à ceci : les tests de
+                    performance sont intégrés trop tard dans le cycle de vie d’une application. Les choix
+                    d’architectures n’ont pas été validés assez tôt en termes de performance mais il est maintenant trop
+                    tard, il faut lancer le site et on ne peut pas revenir sur les fondements. Alors on scale
+                    verticalement.
+                    Remédions à cela et démontrons comment nous pouvons industrialiser nos tests de performance dès les
+                    premières lignes de code de notre application.
+                </p>
+
+                <div class="speakers">
+                    <h4>Nos <strong>Speakers</strong></h4>
+
+
+                    <div class="speaker">
+                        <div class="img-wrapper">
+                            <!--<img alt="William Montaz" src="images/speaker/Willam_Montaz.png"/>-->
+                        </div>
+
+                        <div class="info">
+                            <span class="name">William Montaz</span>
+
+                            <p class="desc">William a 5 ans d’expérience dans les systèmes d’information Java. Il
+                                travaille en binôme depuis 1 an avec Guillaume sur la problématique des tests de
+                                performance chez Voyages-sncf.com Groupe. Sa citation préférée : "The most amazing
+                                achievement of the computer software industry is its continuing cancellation of the
+                                steady and staggering gains made by the computer hardware industry." Henry Peteroski
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="speaker">
+                        <div class="img-wrapper">
+                            <img alt="Guillaume Arnaud" src="images/speaker/Guillaume_Arnaud.png"/>
+                        </div>
+
+                        <div class="info">
+                            <span class="name">Guillaume Arnaud</span>
+
+                            <p class="desc">Guillaume est développeur Java depuis plus de 10 ans et s’intéresse à tout
+                                ce qui gravite autour et à l’intérieur d’une JVM.
+                                Actuellement en mission avec William chez Voyages-sncf.com Groupe,
+                                la mise en place de tests de performance automatiques les ont naturellement menés à
+                                la mise en place de pratiques DevOps.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="puppet-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Puppet, un outil pour les installer tous.</h4>
+            </div>
+            <div class="modal-body">
+                <p class="slot"><strong>Avec l'expansion de la virtualisation et du Cloud, il est maintenant possible
+                    d'obtenir une, deux voire dix ou cent machines en quelques minutes. Mais comment ensuite installer
+                    ces machines, certaines en tant que serveur Web, d'autres en tant que base de données&nbsp;? À la
+                    main&nbsp;? Avec des scripts shell&nbsp;?</strong></p>
+
+                <p class="slot">Comment faire ensuite évoluer cette infrastructure et s'assurer que celle-ci reste
+                    cohérente avec le temps&nbsp;?
+                    Puppet répond à ces questions et bien plus encore&nbsp;: il est l'un des outils permettant la
+                    collaboration des Devs et des Ops autour d'un langage commun.
+                </p>
+
+                <div class="speakers">
+                    <h4>Nos <strong>Speakers</strong></h4>
+
+
+                    <div class="speaker">
+                        <div class="img-wrapper">
+                            <!--<img alt="Mathieu Nantern" src="images/speaker/Mathieu_Nantern.png"/>-->
+                        </div>
+
+                        <div class="info">
+                            <span class="name">Mathieu Nantern</span>
+
+                            <p class="desc">Au cours de ces dernières années je me suis particulièrement intéressé à
+                                toutes les problématiques liées au déploiement applicatif, à l’automatisation et au
+                                NoSQL. Durant mes dernières expériences, j’ai au l’occasion de remplacer MySQL par
+                                Cassandra mais également de déployer 2000 serveurs avec Puppet ainsi que d’automatiser
+                                l’ensemble des installations middleware pour un client. </p>
+                        </div>
+                    </div>
+
+                  
                 </div>
             </div>
         </div>
