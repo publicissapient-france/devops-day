@@ -215,12 +215,12 @@ main section {
   cursor: pointer;
 
   &:after {
-    content:'→';
+    content: '→';
     background-color: @xebiaColor;
     border-radius: 100%;
-    color:white;
-    width:25px;
-    height:25px;
+    color: white;
+    width: 25px;
+    height: 25px;
     display: inline-block;
     line-height: 25px;
   }
@@ -521,7 +521,7 @@ main {
       }
 
       .xebia-labs {
-        width:160px;
+        width: 160px;
       }
     }
   }
@@ -910,35 +910,21 @@ button.close {
         text-align: center;
       }
 
-      img {
-        float: left;
-        max-width: 200px;
+      .img-wrapper {
+        display: inline-block;
+        max-width: 35%;
+        vertical-align: middle;
+        position: relative;
 
-        @media (max-width: @speakerBreakpoint) {
-          float: none;
-        }
+        img {
 
-        @media (max-width: 300px) {
           width: 100%;
-        }
-      }
 
-      .info {
-
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin-left: 200px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-
-        @media (max-width: @speakerBreakpoint) {
-          position: static;
-          margin-left: 20px;
         }
 
         @media (min-width: @speakerBreakpoint) {
-          &:before {
+
+          &:after {
             @arrowWidth: 15px;
 
             content: '';
@@ -949,9 +935,24 @@ button.close {
             border-right: @arrowWidth solid white;
             display: block;
             position: absolute;
-            left: -@arrowWidth;
             top: 45%;
+            right: 0;
           }
+        }
+      }
+
+      .info {
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        display: inline-block;
+        width: 64%;
+        vertical-align: middle;
+
+        @media (max-width: @speakerBreakpoint) {
+
+          width: auto;
         }
 
         .name {
@@ -960,9 +961,11 @@ button.close {
           margin-left: 20px;
           margin-bottom: 15px;
           display: inline-block;
-
         }
 
+        .desc {
+          text-align: justify;
+        }
       }
 
       .clearFloat();
