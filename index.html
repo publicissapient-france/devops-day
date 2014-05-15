@@ -112,13 +112,15 @@
                     </tr>
                     <tr>
                         <td>9h30 - 10h15</td>
-                        <td colspan="2" class="last-cell">
+                        <td colspan="2" class="last-cell popupable" data-toggle="modal" data-target="#keynote-modal">
                             Keynote d'ouverture
                         </td>
                     </tr>
                     <tr>
                         <td>10h15 - 11h15</td>
-                        <td colspan="2" class="last-cell popupable" data-toggle="modal" data-target="#sfr-modal">Retour d'expérience SFR</td>
+                        <td colspan="2" class="last-cell popupable" data-toggle="modal" data-target="#sfr-modal">Retour
+                            d'expérience SFR
+                        </td>
                     </tr>
                     <tr>
                         <td>11h15 - 11h30</td>
@@ -488,46 +490,95 @@
 </div>
 
 <div class="modal fade" id="sfr-modal" tabindex="-1">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Chronologie d'une refonte en mode DevOps</h4>
-        </div>
-        <div class="modal-body">
-            <p class="slot"><strong>Il y a 2 ans, SFR s'est lancée dans la refonte de ses frontaux de gestion de commande.
-                Le but&nbsp;?
-            </strong></p>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Chronologie d'une refonte en mode DevOps</h4>
+            </div>
+            <div class="modal-body">
+                <p class="slot"><strong>Il y a 2 ans, SFR s'est lancée dans la refonte de ses frontaux de gestion de
+                    commande.
+                    Le but&nbsp;?
+                </strong></p>
 
-            <p class="slot">Créer une interface unique et multicanale,
-                permettant ainsi la création d'un back-end centralisé pour la gestion des commandes.
-                Vous découvrirez comment l'équipe ecom360 a réalisé une ré-écriture complète des workflows et
-                de la base de commandes en déployant la solution en production 2 fois par semaine.
-                Quelles problèmatiques avons-nous adressées&nbsp;?
-                Quelle stack technologique avons-nous utilisées pour assurer le suivi de la production&nbsp;?
-                Des échecs aux réussites en passant par les points d'amélioration, cette présentation raconte
-                l'histoire du projet ecom360.</p>
-            <div class="speakers">
-                <h4>Nos <strong>Speakers</strong></h4>
+                <p class="slot">Créer une interface unique et multicanale,
+                    permettant ainsi la création d'un back-end centralisé pour la gestion des commandes.
+                    Vous découvrirez comment l'équipe ecom360 a réalisé une ré-écriture complète des workflows et
+                    de la base de commandes en déployant la solution en production 2 fois par semaine.
+                    Quelles problèmatiques avons-nous adressées&nbsp;?
+                    Quelle stack technologique avons-nous utilisées pour assurer le suivi de la production&nbsp;?
+                    Des échecs aux réussites en passant par les points d'amélioration, cette présentation raconte
+                    l'histoire du projet ecom360.</p>
 
-                <div class="speaker">
-                    <div class="img-wrapper">
-                        <img alt="Séven Le Mesle" src="images/speaker/Seven_LeMesle.png"/>
-                    </div>
+                <div class="speakers">
+                    <h4>Nos <strong>Speakers</strong></h4>
 
-                    <div class="info">
-                        <span class="name">Séven Le Mesle</span>
+                    <div class="speaker">
+                        <div class="img-wrapper">
+                            <img alt="Séven Le Mesle" src="images/speaker/Seven_LeMesle.png"/>
+                        </div>
 
-                        <p class="desc">Séven Le Mesle est consultant senior Xebia, habitué des sites à fort trafic, il aime relever des challenges. Convaincu par l'Open-Source, Séven participe régulièrement à des projets et n'hésite pas à reverser ses développements à la communauté.
-                            Son expérience des architectures à haute performance chez Voyages-sncf.com Groupe et SFR l'ont amené au monde des NoSQL et du Big Data.
-                            Séven est aussi blogger pour le blog de Xebia et organisateur d'atelier.
-                        </p>
+                        <div class="info">
+                            <span class="name">Séven Le Mesle</span>
+
+                            <p class="desc">Séven Le Mesle est consultant senior Xebia, habitué des sites à fort trafic,
+                                il aime relever des challenges. Convaincu par l'Open-Source, Séven participe
+                                régulièrement à des projets et n'hésite pas à reverser ses développements à la
+                                communauté.
+                                Son expérience des architectures à haute performance chez Voyages-sncf.com Groupe et SFR
+                                l'ont amené au monde des NoSQL et du Big Data.
+                                Séven est aussi blogger pour le blog de Xebia et organisateur d'atelier.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="keynote-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Keynote d'ouverture</h4>
+            </div>
+            <div class="modal-body">
+                <p class="slot"><strong>Les banques se comparent souvent entre elles.
+                    Mais en 2011, nous avons souhaité aller un cran plus loin,
+                    en prenant comme référence les géants du web.
+                    Ces derniers ont en effet compris comment mettre l’IT au service de la valeur apportée aux clients.
+                </strong></p>
+
+                <p class="slot">
+                    Les cycles de développement itératifs ont une valeur maximale quand le produit est livré au client
+                    final.
+                    Cela permet une boucle de rétroaction vers l’équipe projet.
+                    Nous avons poussé l’agilité à l’extrême en mettant en production nos itérations.
+                </p>
+
+                <div class="speakers">
+                    <h4>Nos <strong>Speakers</strong></h4>
+
+                    <div class="speaker">
+                        <div class="img-wrapper">
+                            <img alt="Carlos Goncalves" src="images/speaker/Carlos_Goncalves.png"/>
+                        </div>
+
+                        <div class="info">
+                            <span class="name">Carlos Goncalves</span>
+
+                            <p class="desc">Carlos Goncalves est DSI de la Société Générale Corporate & Investment
+                                Banking (SG-CIB)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
