@@ -928,9 +928,9 @@ button.close {
         }
 
         @media (min-width: @speakerBreakpoint) {
-
+          @arrowWidth: 15px;
           &:after {
-            @arrowWidth: 15px;
+
 
             content: '';
             width: 0;
@@ -943,7 +943,28 @@ button.close {
             top: 45%;
             right: 0;
           }
+
+          &.right {
+            &:after {
+              border:none;
+            }
+
+            &:before {
+              content: '';
+              width: 0;
+              height: 0;
+              border-top: @arrowWidth solid transparent;
+              border-bottom: @arrowWidth solid transparent;
+              border-left: @arrowWidth solid white;
+              display: block;
+              position: absolute;
+              top: 45%;
+              left: 0;
+            }
+          }
         }
+
+
       }
 
       .info {
