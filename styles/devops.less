@@ -926,6 +926,7 @@ button.close {
 
       @media (max-width: @speakerBreakpoint) {
         text-align: center;
+
       }
 
       .img-wrapper {
@@ -934,10 +935,12 @@ button.close {
         vertical-align: middle;
         position: relative;
 
+        &.right {
+          float:none;
+        }
+
         img {
-
           width: 100%;
-
         }
 
         @media (min-width: @speakerBreakpoint) {
@@ -957,6 +960,9 @@ button.close {
           }
 
           &.right {
+
+            float:right;
+
             &:after {
               border: none;
             }
@@ -988,7 +994,6 @@ button.close {
         vertical-align: middle;
 
         @media (max-width: @speakerBreakpoint) {
-
           width: auto;
         }
 
