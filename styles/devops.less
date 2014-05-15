@@ -149,6 +149,10 @@ header {
         color: @orangeColor;
         font-size: 50px;
         margin-left: 40px;
+
+        @media(max-width: 400px) {
+          margin-left: 0;
+        }
       }
     }
 
@@ -276,10 +280,18 @@ main {
 
     .techtrends-wrapper {
       float: right;
-
       margin: 20px 40px;
-
       text-align: center;
+
+      a {
+        color:orange;
+        text-decoration: none;
+
+        &:hover {
+          color:orange;
+          text-decoration: none;
+        }
+      }
 
       div {
         margin-top: 10px;
